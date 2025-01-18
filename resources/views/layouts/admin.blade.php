@@ -21,7 +21,9 @@
 </head>
 
 <body>
-    @yield('content')
+    @include('admins.partials._dashboard-skeleton')
+
+    @include('admins.partials._theme-switcher')
 </body>
 
 </html>

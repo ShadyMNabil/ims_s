@@ -1,2 +1,14 @@
 @import "bootstrap/dist/css/bootstrap.rtl.min.css";
 @import "bootstrap-icons/font/bootstrap-icons.min.css";
+
+.sidebar .nav-link {
+    padding-block: 0.75em;
+    border-color: var(--bs-primary-border-subtle) !important;
+
+    &.active {
+        background: var(--bs-primary-bg-subtle);
+        color: var(--bs-primary-subtle);
+        border-block: 1px solid var(--bs-primary-border-subtle);
+        border-end-end-radius: 1em;
+    }
+}
