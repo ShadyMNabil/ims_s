@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'index')
@@ -10,4 +11,8 @@ Route::name('admins.')
     ->group(function () {
         Route::view('/', 'admins.dashboard')
             ->name('dashboard');
+
+        Route::resources([
+            '/categories' => AdminCategoryController::class,
+        ]);
     });
