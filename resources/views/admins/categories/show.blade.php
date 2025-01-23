@@ -24,7 +24,7 @@
                 {{ __('edit') }}
             </a>
             <a href="#" class="btn btn-sm btn-danger"
-                onclick="event.preventDefault();if(confirm({{ __('sure_delete?') }})) { document.getElementById('removeCategory-{{ $category->slug }}').submit();}">
+                onclick="event.preventDefault();if(confirm('{{ __('sure_delete?') }}')) {document.getElementById('removeCategory-{{ $category->slug }}').submit();}">
                 <i class="bi bi-trash3-fill"></i>
                 {{ __('delete') }}
             </a>

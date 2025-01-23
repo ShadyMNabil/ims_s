@@ -84,11 +84,11 @@
                                     </td>
                                     <td>
                                         <a href="#" class="btn btn-sm btn-danger"
-                                            onclick="event.preventDefault();if(confirm({{ __('sure_delete?') }})) { document.getElementById('cemoveCategory-{{ $loop->iteration }}').submit();}">
+                                            onclick="event.preventDefault();if(confirm('{{ __('sure_delete?') }}')) {document.getElementById('removeCategory-{{ $loop->iteration }}').submit();}">
                                             <i class="bi bi-trash3-fill"></i>
                                         </a>
 
-                                        <form id="cemoveCategory-{{ $loop->iteration }}"
+                                        <form id="removeCategory-{{ $loop->iteration }}"
                                             action="{{ route('admins.categories.show', $category->slug) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
