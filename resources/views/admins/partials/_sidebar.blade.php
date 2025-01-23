@@ -30,6 +30,35 @@
                         {{ __('dashboard') }}
                     </a>
                 </li>
+
+                {{-- Category --}}
+                <li class="nav-item pb-1 shadow-sm">
+                    <a class="nav-link collapsed {{ request()->routeIs('admins.categories*') ? 'text-bg-primary' : '' }}"
+                        data-bs-toggle="collapse" data-bs-target="#categories" aria-controls="categories"
+                        aria-expanded="{{ request()->routeIs('admins.categories*') ? 'ture' : 'false' }}">
+                        <i class="bi bi-diagram-3-fill"></i>
+                        {{ __('categories') }}
+                    </a>
+
+                    <div id="categories"
+                        class="ms-3 collapse {{ request()->routeIs('admins.categories*') ? 'show' : '' }}">
+                        <ul class="list-unstyled">
+                            <li class="nav-item">
+                                <a class="nav-link {{ request()->routeIs('admins.categories.index') ? 'active' : '' }}"
+                                    href="{{ route('admins.categories.index') }}">
+                                    {{ __('all') }}
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link {{ request()->routeIs('admins.categories.create') ? 'active' : '' }}"
+                                    href="{{ route('admins.categories.create') }}">
+                                    {{ __('new') }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
 
             <ul class="nav flex-column my-5">
